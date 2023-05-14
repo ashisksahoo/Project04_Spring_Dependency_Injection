@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="bookd" class="com.techpalle.model.BookIndependent">
+		<property name="book_no" value="1"></property>
+		<property name="book_name" value="Wings of Fire"></property>
+		<property name="publisher" value="Universities Press"></property>
+		<property name="subject" value="India's journey to self-reliance in technology"></property>
+		<property name="author" value="APJ Abdul Kalam, Arun Tiwari"></property>
+		<property name="price" value="₹ 163.50"></property>
+	</bean>
+	<bean id="libraryd" class="com.techpalle.model.LibraryDependent">
+		<property name="section_no" value="1"></property>
+		<property name="section_code" value="A-01"></property>
+		<property name="section_name" value="Autobiography"></property>
+		<property name="book" ref="bookd"></property>
+	</bean>
+</beans>
